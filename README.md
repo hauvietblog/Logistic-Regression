@@ -20,6 +20,18 @@ Xét toàn bộ dữ liệu với $\mathbf{X=(x_1,x_2,\dots,x_n)}$ và $\mathbf{
 $$P(\mathbf{y}|\mathbf{X}; \mathbf{w})$$  
 Giả sử rằng các điểm dữ liệu là ngẫu nhiên độc và lập với nhau, ta có thể viết:
 
-$$P(\mathbf{y}|\mathbf{X}; \mathbf{w}) =\prod_{i=1}^n P(y_i| \mathbf{x}_i; \mathbf{w}) = \prod\_{i=1}^n z_i^{y_i}(1 - z_i)^{1- y_i} $$
+$$P(\mathbf{y}|\mathbf{X}; \mathbf{w}) =\prod_{i=1}^n P(y_i| \mathbf{x}_i; \mathbf{w}) = \prod\_{i=1}^n z_i^{y_i}(1 - z_i)^{1- y_i} $$  
+Trực tiếp tối ưu hàm số này theo $\mathbf{w}$ không đơn giản, do đó ta sẽ tối ưu hàm số sau
 
+$$J(\mathbf{w}) = -\log P(\mathbf{y}|\mathbf{X}; \mathbf{w})= -\sum\_{i=1}^n(y_i \log {z}_i + (1-y_i) \log (1 - {z}_i))$$  
+Hàm mất mát với chỉ một điểm dữ liệu $\mathbf{(x_i,y_i)}$ là:  
 
+$$J(\mathbf{w}; \mathbf{x}_i, y_i) = -(y_i \log {z}_i + (1-y_i) \log (1 - {z}_i))$$
+ 
+$$\frac{\partial J(\mathbf{w}; \mathbf{x}_i, y_i)}{\partial \mathbf{w}} = -(\frac{y_i}{z_i} - \frac{1- y_i}{1 - z_i} ) \frac{\partial z_i}{\partial \mathbf{w}}=\frac{z_i - y_i}{z_i(1 - z_i)} \frac{\partial z_i}{\partial \mathbf{w}}$$  
+Sau nhiều phép biến đổi ta tìm được 
+
+$$z=\frac{1}{1+e^{-\mathbf{w^T x}}} = \theta(\mathbf{w^T x})$$  
+
+Vậy công thức cập nhật (theo thuật toán SGD) cho logistic regression là:
+$$\mathbf{w} = \mathbf{w} + \eta(y_i - z_i)\mathbf{x}_i$$
