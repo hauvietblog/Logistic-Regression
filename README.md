@@ -4,14 +4,14 @@
 Xét ánh xạ  
 
 $$\begin{aligned}
-g: \mathbb{R}^m &\to \mathbb{R} \\\\ (x_1,x_2,\dots,x_m) &\mapsto g(x_1,x_2,\dots,x_m)= y
+g: \mathbb{R}^m &\to \begin{Bmatrix} 0,1 \end{Bmatrix} \\\\ (x_1,x_2,\dots,x_m) &\mapsto g(x_1,x_2,\dots,x_m)
 \end{aligned}$$
 
-Giả sử có n điểm dữ liệu trong không gian m-chiều $(x_1^{(i)},x_2^{(i)},\dots,x_m^{(i)}), i=1 \dots n$, và $g(x_1^{(i)},x_2^{(i)},\dots,x_m^{(i)}) = y^{(i)}=0 \vee 1$, chúng ta cần tìm một hàm số $f$ sao cho  
+Giả sử có n điểm dữ liệu trong không gian m-chiều với mỗi  $i = 1,\dots,n$ thì $g(x_1^{(i)},x_2^{(i)},\dots,x_m^{(i)}) = y^{(i)}$, chúng ta cần tìm một hàm số $f$ sao cho  
 
 $$\begin{cases} f(x_1,x_2,\dots,x_m)=\theta(\mathbf{w^T x}) \approx g(x_1,x_2,\dots,x_m) \\ 
-\lim_{x\rightarrow -\infty } \theta(\mathbf{w^T x})=0 & \\ 
-\lim_{x\rightarrow +\infty } \theta(\mathbf{w^T x})=1 &  \end{cases}$$  
+\lim_{\mathbf{w^T x}\rightarrow -\infty } \theta(\mathbf{w^T x})=0 & \\ 
+\lim_{\mathbf{w^T x}\rightarrow +\infty } \theta(\mathbf{w^T x})=1 &  \end{cases}$$  
 
 Giả sử xác suất để một điểm dữ liệu $\mathbf{x}$ rơi vào lớp 1 là $\theta(\mathbf{w^T x})$ và rơi vào lớp 0 là $1-\theta(\mathbf{w^T x})$  
 Ký hiệu $z_i = \theta(\mathbf{w^T x_i})$ ta có:
