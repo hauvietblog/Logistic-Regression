@@ -35,3 +35,5 @@ $$z=\frac{1}{1+e^{-\mathbf{w^T x}}} = \theta(\mathbf{w^T x})$$
 
 Vậy công thức cập nhật (theo thuật toán SGD) cho logistic regression là:
 $$\mathbf{w} = \mathbf{w} + \eta(y_i - z_i)\mathbf{x}_i$$
+### 2. Tài liệu tham khảo
+  1. [Logistic Regression - Machine Learning cơ bản](https://machinelearningcoban.com/2017/01/27/logisticregression/)
