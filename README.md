@@ -10,7 +10,7 @@ g: \mathbb{R}^m &\to \begin{Bmatrix} 0,1 \end{Bmatrix} \\\\ (x_1,x_2,\dots,x_m) 
 Giả sử có n điểm dữ liệu trong không gian m-chiều với mỗi  $i = 1,\dots,n$ thì $g(x_1^{(i)},x_2^{(i)},\dots,x_m^{(i)}) = y^{(i)}$, chúng ta cần tìm một hàm số $f$ sao cho  
  
 $$\begin{cases} f(x_1,x_2,\dots,x_m)=\theta(\m athbf{w^T x}) \approx g(x_1,x_2,\dots,x_m) \\ 
-\lim_{\mathbf{w^T x}\rightarrow -\infty } \theta(\mathbf{w^T x})=0 & \\ 
+\lim_{\mathbf{w^T x}\rightarrow -\infty } \theta(\mathbf{w^T x })=0 & \\ 
 \lim_{\mathbf{w^T x}\rightarrow +\infty } \theta(\mathbf{w^T x})=1 &  \end{cases}$$  
 
 Giả sử xác suất để một điểm dữ liệu $\mathbf{x}$ rơi vào  lớp 1 là $\thet a(\mathbf{w^T x} )$ và rơi vào lớp 0 là $1-\theta(\mathbf{w^T x})$    
