@@ -21,7 +21,7 @@ $$P(\mathbf{y}|\mathbf{X}; \mathbf{w})$$
 Giả sử rằng các điểm dữ liệu là ngẫu nhiên độc và lập với nhau, ta có thể viết:
 
 $$P(\mathbf{y}|\mathbf{X}; \mathbf{w}) =\prod_{i=1}^n P(y_i| \mathbf{x}_i; \mathbf{w}) = \prod\_{i=1}^n z_i^{y_i}(1 - z_i)^{1- y_i} $$  
-Trực tiếp tối ưu hàm số này theo $\mathbf{w}$ không đơn giản, do đó ta sẽ tối ưu hàm số sau
+Trực tiếp tối ưu hàm số này theo $\mathbf{w}$ không đơn giản, do đó ta sẽ tối ưu hàm số sau:
 
 $$J(\mathbf{w}) = -\log P(\mathbf{y}|\mathbf{X}; \mathbf{w})= -\sum\_{i=1}^n(y_i \log {z}_i + (1-y_i) \log (1 - {z}_i))$$  
 Hàm mất mát với chỉ một điểm dữ liệu $\mathbf{(x_i,y_i)}$ là:  
