@@ -4,12 +4,19 @@
 Xét ánh xạ  
 
 $$\begin{aligned}
-g: \mathbb{R}^m &\to \begin{Bmatrix} 0,1 \end{Bmatrix} \\\\ (x_1,x_2,\dots,x_m) &\mapsto g(x_1,x_2,\dots,x_m)
+g: \mathbb{R}^m &\to \begin{Bmatrix} 0,1 \end{Bmatrix} \\\\ (x_1,x_2,\dots,x_m) &\mapsto g(x_1,x_2,\dots,x_m)=y
 \end{aligned}$$
 
-Giả sử có n điểm dữ liệu trong không gian m-chiều với mỗi  $i = 1,\dots,n$ thì $g(x_1^{(i)},x_2^{(i)},\dots,x_m^{(i)}) = y^{(i)}$, chúng ta cần tìm một hàm số $f$ sao cho   
+Giả sử có n điểm dữ liệu trong không gian m-chiều với mỗi  $i = 1,\dots,n$ thì $g(x_1^{(i)},x_2^{(i)},\dots,x_m^{(i)}) = y^{(i)}$  
+Xét ánh xạ 
+
+$$\begin{aligned} 
+f: \mathbb{R}^{m+1} \times \mathbb{R}^{m +1} &\to  [0,1] \\\\ (\mathbf{x},\mathbf{w}) &\mapsto f(\mathbf{x},\mathbf{w}) \approx y 
+\end{aligned}$$
+
+chúng ta cần tìm một hàm số $f$ sao cho   
  
-$$\begin{cases} f(x_1,x_2,\dots,x_m)=\theta(\mathbf{w^T x}) \approx g(x_1,x_2,\dots,x_m) \\ 
+$$\begin{cases} f(\mathbf{x},\mathbf{w})=\theta(\mathbf{w^T x}) \approx y \\ 
 \lim_{\mathbf{w^T x}\rightarrow -\infty } \theta(\mathbf{w^T x })=0 & \\ 
 \lim_{\mathbf{w^T x}\rightarrow +\infty } \theta(\mathbf{w^T x})=1 &  \end{cases}$$  
 
